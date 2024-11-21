@@ -5,6 +5,7 @@ import './index.css';
 import configureStore from './store/store';
 import { Provider } from 'react-redux';
 import { populateProduce } from './store/produce';
+import { addToCart } from './store/cart';
 
 
 const store = configureStore();
@@ -12,6 +13,7 @@ const store = configureStore();
 if (import.meta.env.MODE !== "production") {
   window.store = store;
   window.populateProduce = populateProduce;
+  window.addToCart = addToCart;
 }
 
 
